@@ -7,8 +7,8 @@ import { schemaTypes } from "./schema";
 export default defineConfig({
     name:"default",
     title:"studio",
-    projectId: "etollg65",
-    dataset: "hackathonnextjsphi",
+    projectId: <string> process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: <string> process.env.NEXT_PUBLIC_SANITY_DATASET,
     plugins:[structureTool(), visionTool()],
     basePath:"/studio",
     schema:{
